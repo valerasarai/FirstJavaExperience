@@ -1,0 +1,69 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <context:annotation-config/>
+
+    <bean id="book1" class="com.valerastudy.Book">
+        <property name="name" value="Book 1"/>
+        <property name="author" value="Autor 1"/>
+        <property name="nrPages" value="1"/>
+    </bean>
+    <bean id="book2" class="com.valerastudy.Book">
+        <property name="name" value="Book 2"/>
+        <property name="author" value="Autor 2"/>
+        <property name="nrPages" value="2"/>
+    </bean>
+    <bean id="book3" class="com.valerastudy.Book">
+        <property name="name" value="Book 3"/>
+        <property name="author" value="Autor 3"/>
+        <property name="nrPages" value="3"/>
+    </bean>
+    <bean id="book4" class="com.valerastudy.Book">
+        <property name="name" value="Book 4"/>
+        <property name="author" value="Autor 4"/>
+        <property name="nrPages" value="4"/>
+    </bean>
+    <bean id="book5" class="com.valerastudy.Book">
+        <property name="name" value="Book 5"/>
+        <property name="author" value="Autor 5"/>
+        <property name="nrPages" value="5"/>
+    </bean>
+
+
+    <bean id="megaBook1" class="com.valerastudy.Book">
+        <property name="name" value="MegaBook1"/>
+        <property name="author" value="MegaAuthor"/>
+        <property name="nrPages" value="1000"/>
+    </bean>
+
+    <bean id="megaBook" class="com.valerastudy.Book">
+        <property name="name" value="MegaBook2"/>
+        <property name="author" value="MegaAuthor"/>
+        <property name="nrPages" value="1000"/>
+    </bean>
+
+    <bean id="bookCollection" class="com.valerastudy.BookCollection">
+        <property name="books">
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+                <ref bean="book3"/>
+                <ref bean="book4"/>
+                <ref bean="book5"/>
+            </list>
+        </property>
+    </bean>
+
+
+</beans>
